@@ -10,7 +10,7 @@
     <div class=" offset-md-2">
         <h3>Edit Category</h3>
         <hr>
-        u
+        
         <form action="{{route('category.update',['id'=> $category->id])}}" method="POST">
 
             @method('PUT')

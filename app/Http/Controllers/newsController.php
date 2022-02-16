@@ -56,18 +56,16 @@ class newsController extends Controller
         $request->validate([
 
             'title' =>  'required',
-            'body' => 'required'
+            'discraption' => 'required'
 
         ]);
 
         $news = news::find($id);
         $news->title =  $request->title ;
-        $news->body =  $request->body ;
-        $news->image =  $request->image ;
+        $news->discraption =  $request->discraption ;
 
         $news->save();
-
-        return redirect('/c')->with('status', 'news was updated !');
+        return redirect('/d')->with('status', 'news was updated !');
 
     }
 
