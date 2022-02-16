@@ -27,10 +27,10 @@
   border-radius: 5px;
 }
 #cards_landscape_wrap-2 .card-flyer .image-box img{
-  -webkit-transition:all .9s ease; 
-  -moz-transition:all .9s ease; 
-  -o-transition:all .9s ease;
-  -ms-transition:all .9s ease; 
+  -webkit-transition:all .900s ease; 
+  -moz-transition:all .900s ease; 
+  -o-transition:all .900s ease;
+  -ms-transition:all .900s ease; 
   width: 100%;
   height: 200px;
 }
@@ -55,21 +55,21 @@
 }
 #cards_landscape_wrap-2 .card-flyer{
   background: #FFFFFF;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  -ms-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.700s ease-in;
+  -moz-transition: all 0.700s ease-in;
+  -ms-transition: all 0.700s ease-in;
+  -o-transition: all 0.700s ease-in;
+  transition: all 0.700s ease-in;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
 }
 #cards_landscape_wrap-2 .card-flyer:hover{
   background: #fff;
   box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  -ms-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.20s ease-in;
+  -moz-transition: all 0.20s ease-in;
+  -ms-transition: all 0.20s ease-in;
+  -o-transition: all 0.20s ease-in;
+  transition: all 0.20s ease-in;
   margin-top: 50px;
 }
 #cards_landscape_wrap-2 .card-flyer .text-box p{
