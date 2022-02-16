@@ -37,6 +37,6 @@
     @endforeach
 </tbody>
 </table>
-<a href="{{ route('category.create')}}" class="btn btn-primary"> Create perosn info </a>
+<a href="{{ route('category.create')}}" class="btn btn-primary"> Create category </a>
 
 

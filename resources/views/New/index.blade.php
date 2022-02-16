@@ -40,6 +40,6 @@
     @endforeach
 </tbody>
 </table>
-<a href="{{ route('news.create')}}" class="btn btn-primary"> Create perosn info </a>
+<a href="{{ route('news.create')}}" class="btn btn-primary"> Create news </a>
 
 
