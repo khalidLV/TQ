@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\news;
+use App\Models\category;
 use Illuminate\Http\Request;
 
 class newsController extends Controller
@@ -14,15 +15,20 @@ class newsController extends Controller
          return view('new.index',  compact('news', 'count'));
     }
 
+    public function create()
+    {
+        return view('new.create');
+    }
+
     public function store(Request $request)
     {
-dd('f');
-        $request->validate([
+        
+        // $request->validate([
 
-            'title' =>  'required',
-            'discraption' => 'required'
+        //     'title' =>  'required',
+        //     'discraption' => 'required'
 
-        ]);
+        // ]);
        
         $news = new news();
 
@@ -32,8 +38,16 @@ dd('f');
 
         $news->save();
 
-        return redirect()->route('new.index')->with('news created !');
+        return redirect('/d')->with('news created !');
 
+    }
+
+    public function edit($id)
+    {
+        // $news = news::all();
+        $news = news::find($id);
+        
+        return view('new.edit', compact('news'));
     }
 
         

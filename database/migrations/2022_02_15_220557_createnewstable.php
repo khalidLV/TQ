@@ -14,11 +14,11 @@ class Createnewstable extends Migration
     public function up()
     {
         Schema::create('News', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
         // $table->foreignId('category_id')->references('id')->on('category');
             $table->string('title')->nullable();
-            $table->text('discraption');
-            $table->string('image');
+            $table->text('discraption')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

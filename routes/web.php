@@ -20,7 +20,7 @@ use App\Http\Controllers\newsController;
 
 // route for news
 Route::get('/create/news', [newsController::class , 'create']) ->name('news.create') ;
-Route::get('/store/news', [newsController::class , 'store']) ->name('news.store') ;
+Route::post('/store/news', [newsController::class , 'store']) ->name('news.store') ;
 Route::put('/update/news/{id}', [newsController::class , 'update']) ->name('news.update') ;
 Route::get('/edit/news/{id}', [newsController::class , 'edit']) ->name('news.edit') ;
 Route::get('/d', [newsController::class , 'index']) ->name('news.index') ;

@@ -13,12 +13,12 @@
            @csrf
            <div class="form-group">
                <label for="title"> Title</label>
-               <input type="text" name="title" id="title" class="form-control">
+               <input type="text" name="title" id="title" class="form-control" value="{{$news->title}}" >
            </div>
   
            <div class="form-group">
               <label for="discraption"> description</label>
-              <textarea name="discraption" id="discraption" cols="20" rows="5" class="form-control"></textarea>
+              <textarea name="discraption" id="discraption" cols="20" rows="5" class="form-control"  >{{$news->discraption}} </textarea>
           </div>
 
            <div class="form-group">
@@ -28,7 +28,7 @@
            
 
            <div class="form-group">
-            <button type="submit" class="btn btn-primary" style="margin-left:10%;"> Create </button>
+            <button type="submit" class="btn btn-primary" style="margin-left:10%;"> Update </button>
         </div>
        
         </form>
