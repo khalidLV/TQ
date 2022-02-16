@@ -4,9 +4,10 @@
 @section('content')
 
 
+<div class="container table-responsive py-4"> 
 
 <div class="row">
-    <div class="col-md-12 offset-md-2">
+    <div class=" offset-md-2">
         <h3>Edit News</h3>
         <hr>
         
@@ -40,4 +41,5 @@
     </div>
     
    </div>
+</div>
    @endsection

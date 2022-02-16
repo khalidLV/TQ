@@ -9,8 +9,11 @@
   position: sticky;
 }
 #cards_landscape_wrap-2 .container{
-  padding-top: 80px; 
+  padding-top: 10px; 
   padding-bottom: 100px;
+  position: relative;
+  left: 300px;
+
 }
 #cards_landscape_wrap-2 a{
   text-decoration: none;
@@ -38,6 +41,11 @@
   -ms-transform:scale(1.15);
   -o-transform:scale(1.15);
   transform:scale(1.15);
+}
+.image-po{
+  position: relative; 
+  left: 290px;
+  top: -20px;
 }
 #cards_landscape_wrap-2 .card-flyer .text-box{
   text-align: center;
@@ -83,8 +91,13 @@
   color: #00acc1;
 } 
  </style>
-<div class="container table-responsive py-4"> 
 
+
+<div class="container table-responsive py-4"> 
+    <div class="image-po ">
+        <img src=https://up6.cc/2022/02/164503212520991.jpg alt="" />
+    </div>
+   
     <div id="cards_landscape_wrap-2">
         <div class="container">
             <div class="row">
@@ -117,36 +130,13 @@
                         </div>
                     </a>
                 </div>
-                
+               
             </div>
         </div>
-    </div>
-
-
-{{-- <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title"> news Info</h5>
-        <div class="card-body">
         
-        <p class="card-text"> the total of news is :  {{$countnews}} </p>
-        </div>
     </div>
 
-   
-  </div>
-
-
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title"> category Info</h5>
-        <div class="card-body">
-        
-        <p class="card-text"> the total of category is : {{$countcategory}} </p>
-        </div>
-    </div>
-
-   
-  </div> --}}
 
 </div>
+
   @endsection
