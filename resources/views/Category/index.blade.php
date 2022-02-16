@@ -10,14 +10,13 @@
      
         <th scope="col">ID</th>
         <th scope="col">Title</th>
-        <th scope="col">Discraption</th>
-        <th scope="col">Image</th>
+        
       </tr>
     </thead>
     
 
 
-    @foreach($news as $news)
+    @foreach($category as $category)
 
     <tr>
         
@@ -26,12 +25,10 @@
     <tbody>
         <tr>
           
-          <td>{{$news->id}}</td>
-        <td>{{$news->title}}</td>
-        <td>{{$news->discraption}}</td>
-        <td>{{$news->image}}</td>
+          <td>{{$category->id}}</td>
+        <td>{{$category->title}}</td>
         <td>
-        <a href="{{ route('news.edit', ['id' => $news->id ])}}" class="btn btn-primary"> Edit</a>
+        <a href="{{ route('category.edit', ['id' => $category->id ])}}" class="btn btn-primary"> Edit</a>
     </td>
         </tr>
                 
@@ -40,6 +37,6 @@
     @endforeach
 </tbody>
 </table>
-<a href="{{ route('news.create')}}" class="btn btn-primary"> Create perosn info </a>
+<a href="{{ route('category.create')}}" class="btn btn-primary"> Create perosn info </a>
 
 

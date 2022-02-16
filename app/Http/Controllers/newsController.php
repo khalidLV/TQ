@@ -44,10 +44,10 @@ class newsController extends Controller
 
     public function edit($id)
     {
-        // $news = news::all();
-        $news = news::find($id);
+        $news = news::all();
+        $category = category::find($id);
         
-        return view('new.edit', compact('news'));
+        return view('new.edit', compact('news','category'));
     }
 
         

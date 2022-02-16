@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\newsController;
+use App\Http\Controllers\categoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,5 +31,6 @@ Route::get('/create/category', [categoryController::class , 'create']) ->name('c
 Route::post('/store/category', [categoryController::class , 'store']) ->name('category.store') ;
 Route::put('/update/category/{id}', [categoryController::class , 'update']) ->name('category.update') ;
 Route::get('/edit/category/{id}', [categoryController::class , 'edit']) ->name('category.edit') ;
+Route::get('/c', [categoryController::class , 'index']) ->name('category.index') ;
 
 ;
