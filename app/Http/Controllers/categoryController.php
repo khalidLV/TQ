@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\news;
 use App\Models\category;
 use Illuminate\Http\Request;
 
@@ -50,9 +51,34 @@ public function create()
         return view('category.edit', compact('category'));
     }
 
+    public function update(Request $request,$id)
+    {
+
+        
+        $request->validate([
+
+            'title' =>  'required'
+
+        ]);
+
+        $category = category::find($id);
+        $category->title =  $request->title ;
+      
+        $category->save();
+
+        return redirect('/c')->with('status', 'category was updated !');
+
+    }
+
     
 
+    public function home()
+    {
 
+    $countnews = news::count();
+    $countcategory = category::count();
+    return view('home',  compact('countcategory', 'countnews'));
+}
 
 
 }

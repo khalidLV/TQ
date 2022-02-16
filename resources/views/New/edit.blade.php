@@ -7,10 +7,11 @@
 
 <div class="row">
     <div class="col-md-12 offset-md-2">
-        <h3>Create News</h3>
+        <h3>Edit News</h3>
         <hr>
         
-        <form action="{{route('news.store')}}" method="POST">
+        <form action="{{route('news.update',['id'=> $news->id])}}" method="POST">
+            @method('PUT')
 
            
            @csrf

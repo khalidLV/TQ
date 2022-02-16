@@ -6,8 +6,11 @@
 
 
 
-
-<table class="table" >
+<div class="container table-responsive py-4"> 
+    <div class="title">
+        <h1> News</h1>
+      </div>
+    <table class="table table-bordered table-hover">
     <thead class="thead-dark">
       <tr>
      
@@ -15,6 +18,7 @@
         <th scope="col">Title</th>
         <th scope="col">Discraption</th>
         <th scope="col">Image</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     

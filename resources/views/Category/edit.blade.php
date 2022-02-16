@@ -7,12 +7,12 @@
 
 <div class="row">
     <div class="col-md-12 offset-md-2">
-        <h3>Create category</h3>
+        <h3>Edit Category</h3>
         <hr>
-        
-        <form action="{{route('category.store')}}" method="POST">
+        u
+        <form action="{{route('category.update',['id'=> $category->id])}}" method="POST">
 
-           
+            @method('PUT')
            @csrf
            <div class="form-group">
                <label for="title"> Title</label>

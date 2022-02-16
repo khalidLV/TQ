@@ -38,18 +38,37 @@ class newsController extends Controller
 
         $news->save();
 
-        return redirect('/d')->with('news created !');
+        return redirect('/d')->with('status', 'news was updated !');
 
     }
 
     public function edit($id)
     {
-        $news = news::all();
-        $category = category::find($id);
+        // $news = news::all();
+        $news = news::find($id);
         
-        return view('new.edit', compact('news','category'));
+        return view('new.edit', compact('news'));
     }
 
-        
+    public function update(Request $request,$id)
+    {
+
+        $request->validate([
+
+            'title' =>  'required',
+            'body' => 'required'
+
+        ]);
+
+        $news = news::find($id);
+        $news->title =  $request->title ;
+        $news->body =  $request->body ;
+        $news->image =  $request->image ;
+
+        $news->save();
+
+        return redirect('/c')->with('status', 'news was updated !');
+
+    }
 
 }

@@ -33,4 +33,7 @@ Route::put('/update/category/{id}', [categoryController::class , 'update']) ->na
 Route::get('/edit/category/{id}', [categoryController::class , 'edit']) ->name('category.edit') ;
 Route::get('/c', [categoryController::class , 'index']) ->name('category.index') ;
 
+Route::get('/home', [categoryController::class , 'home']) ->name('home') ;
+
+
 ;
