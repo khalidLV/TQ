@@ -24,14 +24,17 @@ Route::get('/create/news', [newsController::class , 'create']) ->name('news.crea
 Route::post('/store/news', [newsController::class , 'store']) ->name('news.store') ;
 Route::put('/update/news/{id}', [newsController::class , 'update']) ->name('news.update') ;
 Route::get('/edit/news/{id}', [newsController::class , 'edit']) ->name('news.edit') ;
-Route::get('/d', [newsController::class , 'index']) ->name('news.index') ;
+Route::get('/news', [newsController::class , 'index']) ->name('news.index') ;
+Route::delete('/delete/news/{id}', [newsController::class , 'destroy']) ->name('news.delete') ;
+
 
 // route for category
 Route::get('/create/category', [categoryController::class , 'create']) ->name('category.create') ;
 Route::post('/store/category', [categoryController::class , 'store']) ->name('category.store') ;
 Route::put('/update/category/{id}', [categoryController::class , 'update']) ->name('category.update') ;
 Route::get('/edit/category/{id}', [categoryController::class , 'edit']) ->name('category.edit') ;
-Route::get('/c', [categoryController::class , 'index']) ->name('category.index') ;
+Route::get('/Category', [categoryController::class , 'index']) ->name('category.index') ;
+Route::delete('/delete/category/{id}', [categoryController::class , 'destroy']) ->name('category.delete') ;
 
 Route::get('/home', [categoryController::class , 'home']) ->name('home') ;
 

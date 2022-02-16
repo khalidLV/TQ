@@ -18,7 +18,6 @@ class NewsCategoryTable extends Migration
             $table->foreignId('News_id')->references('id')->on('News');
             $table->foreignId('category_id')->references('id')->on('category');
             
-            
         });
     }
 

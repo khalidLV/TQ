@@ -9,8 +9,12 @@ class news extends Model
 {
     use HasFactory;
 
+    protected $table = 'news' ;
+
+    protected $primarykey = 'id' ;
+
     public function categories()
     {
-        return $this->belongsToMany('App\Models\category');
+        return $this->belongsToMany('App\Models\category','News_Category');
     }  
 }

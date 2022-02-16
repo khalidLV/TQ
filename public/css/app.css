@@ -1,0 +1,214 @@
+
+
+$gw-blue: rgb(52, 152, 219); /*#3498db  edit   */
+$gw-red: rgb(192, 57, 43); /*#c0392b  delete   */
+/* 1st alternate hover colors if hover inset shadow not working properly
+$gw-blue-dark: rgb(27, 79, 114); /*#1b4f72
+$gw-purple-dark: rgb(74, 35, 90);  /*#4a235a
+$gw-green-dark: rgb(29, 131, 72); /*#1d8348
+$black: rgb(0, 0, 0); /*#000000
+$gw-red-dark: rgb(123, 36, 28); /*#7b241c */
+  
+.button {
+  font-family:'Open Sans';
+  font-size: 16px;
+  font-weight:400;
+  display:inline-block;
+  color:#FFF;
+  border-radius: .25em;
+  text-shadow: -1px -1px 0px rgba(0,0,0,0.4);
+}
+
+.primary {
+  line-height:40px;
+  transition:ease-in-out .2s;
+  padding: 0 16px;
+}
+
+.primary:hover, .condensed:hover, .touch:hover {
+  transform:scale(1.02);
+  box-shadow:2px 2px 5px rgba(0,0,0,0.20), inset 0 0 0 99999px rgba(0,0,0,0.2);
+}
+/* 2nd alternate hover colors if hover inset shadow not working properly 
+.edit:hover {
+  background: darken($gw-blue, 10%);
+}
+
+.save:hover {
+  background: darken($gw-purple, 10%);
+}
+
+.new:hover {
+  background: darken($gw-green, 10%);
+}
+
+.cancel:hover {
+  background: darken($gw-gray-5, 10%);
+}
+
+.delete:hover {
+  background: darken($gw-red, 10%);
+}
+*/
+
+.condensed {
+  transition:ease-in-out .2s;
+  line-height:24px;
+  padding: 0 8px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+}
+
+.touch {
+  transition:ease-in-out .2s;
+  line-height:40px;
+  width:40px;
+  padding: 0px;
+  text-align: center;
+}
+
+.inlineIcon {}
+
+.edit:before, .save:before, .new:before, .cancel:before, .delete:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  font-size:1rem;
+  padding-right:12px;
+  background:none;
+  color:#FFF;
+}
+
+.condensed.edit:before, .condensed.save:before, .condensed.new:before, .condensed.cancel:before, .condensed.delete:before {
+   content:none;
+}
+
+.touch.edit:before, .touch.save:before, .touch.new:before, .touch.cancel:before, .touch.delete:before {
+  width:100%;
+  text-align:center;
+  font-size:1.25rem;
+}
+
+.inlineIcon.edit, .inlineIcon.save, .inlineIcon.new, .inlineIcon.cancel, .inlineIcon.delete {
+  background: transparent;
+}
+
+.inlineIcon.edit:before, .inlineIcon.save:before, .inlineIcon.new:before, .inlineIcon.cancel:before, .inlineIcon.delete:before {
+  line-height:32px;
+  font-size:32px;
+  padding:4px 0px;
+}
+
+.edit {
+  background: $gw-blue;
+  
+  &:before {
+    content: "\f040";
+  }
+}
+
+.inlineIcon.edit:before {
+    color: $gw-blue;
+}
+
+.delete {
+  background: $gw-red;
+  
+  &:before {
+    content: "\f1f8";
+  }
+}
+
+.inlineIcon.delete:before {
+    color: $gw-red;
+}
+
+
+/*----  Main Style  ----*/
+#cards_landscape_wrap-2{
+  text-align: center;
+  position: sticky;
+}
+#cards_landscape_wrap-2 .container{
+  padding-top: 10px; 
+  padding-bottom: 100px;
+  position: relative;
+  left: 300px;
+  bottom: -50px
+
+}
+#cards_landscape_wrap-2 a{
+  text-decoration: none;
+  outline: none;
+}
+#cards_landscape_wrap-2 .card-flyer {
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box{
+  overflow: hidden;
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box img{
+  -webkit-transition:all .900s ease; 
+  -moz-transition:all .900s ease; 
+  -o-transition:all .900s ease;
+  -ms-transition:all .900s ease; 
+  width: 60%;
+  height: 170px;
+}
+#cards_landscape_wrap-2 .card-flyer:hover .image-box img{
+  opacity: 0.7;
+  -webkit-transform:scale(1.15);
+  -moz-transform:scale(1.15);
+  -ms-transform:scale(1.15);
+  -o-transform:scale(1.15);
+  transform:scale(1.15);
+}
+.image-po{
+  position: relative; 
+  left: 680px;
+  top: 40px;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box{
+  text-align: center;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box .text-container{
+  padding: 30px 18px;
+}
+#cards_landscape_wrap-2 .card-flyer{
+  background: #FFFFFF;
+  -webkit-transition: all 0.700s ease-in;
+  -moz-transition: all 0.700s ease-in;
+  -ms-transition: all 0.700s ease-in;
+  -o-transition: all 0.700s ease-in;
+  transition: all 0.700s ease-in;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+}
+#cards_landscape_wrap-2 .card-flyer:hover{
+  background: #fff;
+  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+  -webkit-transition: all 0.20s ease-in;
+  -moz-transition: all 0.20s ease-in;
+  -ms-transition: all 0.20s ease-in;
+  -o-transition: all 0.20s ease-in;
+  transition: all 0.20s ease-in;
+  margin-top: 50px;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box p{
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px; 
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box h6{
+  margin-top: 0px;
+  margin-bottom: 4px; 
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto Black', sans-serif;
+  letter-spacing: 1px;
+  color: #00acc1;
+} 
+
+ 
