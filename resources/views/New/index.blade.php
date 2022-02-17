@@ -55,3 +55,10 @@
     <a href="{{ route('news.create')}}" class="button primary btn btn-primary"> Create news </a>
 </div>
     @endsection
+
+    <script>
+
+$(function() {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+    </script>
