@@ -32,6 +32,10 @@
             "Tests\\": "tests/"
         }
     },
+
+    "require-dev": {
+        "heroku/heroku-buildpack-php" : "dev-master"
+    },
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
