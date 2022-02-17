@@ -49,7 +49,6 @@ class newsController extends Controller
 
 
 
-
         return redirect('/news')->with('status', 'news was updated !');
     }
 

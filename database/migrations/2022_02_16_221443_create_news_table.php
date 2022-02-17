@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Createnewstable extends Migration
+class CreateNewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,11 +14,11 @@ class Createnewstable extends Migration
     public function up()
     {
         Schema::create('News', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
         // $table->foreignId('category_id')->references('id')->on('category');
             $table->string('title')->nullable();
             $table->text('discraption')->nullable();
-            $table->string('image')();
+            $table->string('image');
             $table->timestamps();
         });
     }

@@ -15,7 +15,7 @@ class category extends Model
 
     public function news()
     {
-        return $this->belongsToMany('App\Models\news','News_Category');
+        return $this->belongsToMany(news::class);
     }
     
     public function hasnews($new) {
