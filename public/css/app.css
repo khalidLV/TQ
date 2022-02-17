@@ -132,8 +132,9 @@ $gw-red-dark: rgb(123, 36, 28); /*#7b241c */
   padding-bottom: 100px;
   position: relative;
   left: 300px;
-  bottom: -50px;}
-  
+  bottom: -50px
+
+}
 #cards_landscape_wrap-2 a{
   text-decoration: none;
   outline: none;
@@ -162,7 +163,7 @@ $gw-red-dark: rgb(123, 36, 28); /*#7b241c */
   transform:scale(1.15);
 }
 .image-po{
- 
+  position: relative; 
   left: 880px;
   top: 40px;
 }
