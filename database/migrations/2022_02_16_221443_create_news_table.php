@@ -18,7 +18,7 @@ class CreateNewsTable extends Migration
         // $table->foreignId('category_id')->references('id')->on('category');
             $table->string('title')->nullable();
             $table->text('discraption')->nullable();
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
