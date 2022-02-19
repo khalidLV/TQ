@@ -5,7 +5,7 @@
 
 <div class="container table-responsive py-4">
 
-    <h3>Create category</h3>
+    <h3>Create Category</h3>
     <hr>
 
     <form action="{{route('category.store')}}" method="POST">
@@ -17,16 +17,28 @@
             <input type="text" name="title" id="title" class="form-control">
         </div>
 
-        <div class="form-group">
-            <label for="discraption"> description</label>
-            <textarea name="discraption" id="discraption" cols="20" rows="5" class="form-control"></textarea>
+        <br>
+        <label > <h3> Choose Categories : </h3> </label>
+        <hr>
+
+
+        @foreach($nc1 as $news)
+ 
+        <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="checkbox2" name="category->title[]" value="{{ $news->id }}">
+        <label class="custom-control-label" for="checkbox2">{{ $news->title }}</label>
+
         </div>
-
-
+        </a>
+        
+        
+        @endforeach
 
 
         <div class="form-group">
             <button type="submit" class="btn btn-primary button primary edit " style="margin-left:10%;"> Create </button>
+            <button type="submit" class="ui btn btn-danger primary" href="{{redirect()->getUrlGenerator()->previous() }}" >إلغاء</a> </button>
+
         </div>
 
     </form>

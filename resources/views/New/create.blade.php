@@ -26,11 +26,29 @@
         <div class="form-group">
             <input type="file" name="image" id="image" class="form-control-file">
         </div>
+<br>
+        <label > <h3> Choose Categories : </h3> </label>
+        <hr>
+
+
+        @foreach($nc as $category)
+ 
+        <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="checkbox1" name="category->title[]" value="{{ $category->id }}">
+        <label class="custom-control-label" for="checkbox1">{{ $category->title }}</label>
+
+        </div>
+        </a>
+        
+        
+        @endforeach
 
 
 
         <div class="form-group">
             <button type="submit" class="btn btn-primary button primary edit" style="margin-left:10%;"> Create </button>
+            <button type="submit" class="ui btn btn-danger primary" href="{{redirect()->getUrlGenerator()->previous() }}" >إلغاء</a> </button>
+
         </div>
 
     </form>

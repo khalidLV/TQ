@@ -20,7 +20,9 @@ class categoryController extends Controller
 
     public function create()
     {
-        return view('Category.create');
+        $nc1 = news::all();
+
+        return view('Category.create',compact('nc1'));
     }
 
     public function store(Request $request)

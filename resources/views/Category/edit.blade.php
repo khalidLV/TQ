@@ -18,6 +18,8 @@
                     <input type="text" name="title" id="title" class="form-control" value="{{$category->title}}">
                 </div>
 
+                
+
 
 
 

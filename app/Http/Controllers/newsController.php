@@ -5,21 +5,25 @@ namespace App\Http\Controllers;
 use App\Models\news;
 use App\Models\category;
 use Illuminate\Http\Request;
+use App\Models\news_category;
 use Illuminate\Support\Facades\Auth;
 
 class newsController extends Controller
 {
     public function index()
     {
-        // $news = news::where('user_id', Auth::id())->paginate(5);
+        
+        // $newsPG = news::orderBy('id', 'desc')->paginate(5);
         $news = news::all();
         $count = news::count();
         return view('new.index',  compact('news', 'count'));
     }
 
-    public function create()
+    public function create()    
     {
-        return view('new.create');
+        $nc = category::all();
+
+        return view('new.create',  compact('nc'));
     }
 
     public function store(Request $request)
