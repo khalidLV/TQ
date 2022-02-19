@@ -33,8 +33,13 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 
 
 
-require('../vendor/autoload.php');
+require __DIR__.'/../vendor/autoload.php';
 
+<<<<<<< HEAD
+=======
+require __DIR__.'/bootstrap/autoload.php';
+$app = require_once __DIR__.'/bootstrap/app.php';
+>>>>>>> parent of 59241ad (url fix)
 
 /*
 |----------------------------<<<<<<< HEAD
@@ -52,8 +57,11 @@ require('../vendor/autoload.php');
 | to this client's browser, allowing them to enjoy our application.
 |
 */
-
-$app = require_once __DIR__.'//bootstrap/app.php';
+require __DIR__.'/bootstrap/autoload.php';
+$app = require_once __DIR__.'/bootstrap/app.php';
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 59241ad (url fix)
 
 $kernel = $app->make(Kernel::class);
 
