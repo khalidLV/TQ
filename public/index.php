@@ -34,35 +34,8 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 
 
 require __DIR__.'/../vendor/autoload.php';
-
-<<<<<<< HEAD
-=======
 require __DIR__.'/bootstrap/autoload.php';
 $app = require_once __DIR__.'/bootstrap/app.php';
->>>>>>> parent of 59241ad (url fix)
-
-/*
-|----------------------------<<<<<<< HEAD
-
-
-
-=======
->>>>>>> parent of 6a10bcd (add index.php)
-----------------------------------------
-| Run The Application
-|--------------------------------------------------------------------------
-|
-| Once we have the application, we can handle the incoming request using
-| the application's HTTP kernel. Then, we will send the response back
-| to this client's browser, allowing them to enjoy our application.
-|
-*/
-require __DIR__.'/bootstrap/autoload.php';
-$app = require_once __DIR__.'/bootstrap/app.php';
-<<<<<<< HEAD
-=======
->>>>>>> parent of 59241ad (url fix)
-
 $kernel = $app->make(Kernel::class);
 
 $response = $kernel->handle(
