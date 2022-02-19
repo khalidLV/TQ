@@ -3,7 +3,7 @@
 @section('content')
 
 
-<div class="image-po ">
+<div class="image-po">
     <img src=https://up6.cc/2022/02/164503212520991.jpg alt="" />
 </div>
 
@@ -47,6 +47,5 @@
 
 </div>
 
-</div>
 
 @endsection
