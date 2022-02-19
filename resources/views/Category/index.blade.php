@@ -41,10 +41,12 @@
         </td>
 
         <td>
-          <form action="{{route('category.delete',['id'=> $category->id]) }}" method="POST"
-            class="btn btn-danger primary float-left margin-left: 100px "> Delete </a>
-          @csrf
-          @method('DELETE')
+          
+          <form action="{{route('category.delete',['id'=> $category->id]) }}" method="POST">
+            <button type="submit" class="btn btn-danger primary float-left margin-left: 100px "> Delete </button> 
+            @csrf
+            @method('delete')
+          </form>
       </tr>
       </td>
 
@@ -53,7 +55,7 @@
       @endforeach
     </tbody>
   </table>
-  <a href="{{ route('category.create')}}" class="btn btn-primary"> Create category </a>
+  <a href="{{ route('category.create')}}" class="btn btn-primary button primary"> Create category </a>
 
 </div>
 

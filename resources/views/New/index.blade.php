@@ -41,9 +41,11 @@
                 <td>
                     @csrf
                     @method('DELETE')
-                    <form action="{{route('news.delete',['id'=> $news->id]) }}" method="POST"
-                        class="btn btn-danger button primary delete float-left margin-left: 100px "> Delete </form>
-
+                    <form action="{{route('news.delete',['id'=> $news->id]) }}" method="POST">
+                        <button type="submit" class="btn btn-danger primary float-left margin-left: 100px "> Delete </button> 
+                        @csrf
+                        @method('delete')
+                    </form>
                 </td>
             </tr>
 

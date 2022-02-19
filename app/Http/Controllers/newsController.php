@@ -83,7 +83,6 @@ class newsController extends Controller
 
         public function destroy(Request $request,$id)
     {
-        dd('f');
         $news = news::find($id) ;
         $news->delete();
         // $news->categories()->detach($request->title);

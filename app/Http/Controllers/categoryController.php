@@ -86,12 +86,12 @@ class categoryController extends Controller
         return view('home',  compact('countcategory', 'countnews'));
     }
 
-    // public function destroy(Request $request,$id)
-    // {
-    //     $category = category::find($id) ;
-    //     $category->delete();
-    //     // $category->news()->detach($request->title);
-    //     return redirect('/Category');
-    // }
+    public function destroy(Request $request,$id)
+    {
+        $category = category::find($id) ;
+        $category->delete();
+        // $category->news()->detach($request->title);
+        return redirect('/Category');
+    }
 
 }
