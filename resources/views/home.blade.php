@@ -8,7 +8,7 @@
 </div>
 
 <div id="cards_landscape_wrap-2">
-    <div class="container">
+    <div class="container table-responsive py-5">
         <div class="row">
 
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">

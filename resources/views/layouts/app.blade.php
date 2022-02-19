@@ -16,7 +16,7 @@
 <style>
 .bg {
     /* The image used */
-    background-image: url(images/bg2.jpg);
+    background-image: url(images/bg4.jpg);
   
     /* Full height */
     height: 100%; 
@@ -28,7 +28,7 @@
   }
   </style>
 
-  {{-- <div class="bg"> --}}
+  <div class="bg">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
