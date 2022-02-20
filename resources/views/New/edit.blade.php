@@ -26,9 +26,9 @@
                         class="form-control">{{$news->discraption}} </textarea>
                 </div>
 
-               // <div class="form-group">
-               //     <input type="file" name="coverImage" id="coverImage" class="form-control-file">
-              //  </div>
+                {{-- <div class="form-group">
+                   <input type="file" name="coverImage" id="coverImage" class="form-control-file">
+               </div> --}}
 
                 <br>
                 <label>

@@ -23,9 +23,9 @@
             <textarea name="discraption" id="discraption" cols="20" rows="5" class="form-control"></textarea>
         </div>
 
-       //   <div class="form-group">
-       //     <input type="file" name="image" id="image" class="form-control-file">
-        //</div>
+          {{-- <div class="form-group">
+            <input type="file" name="image" id="image" class="form-control-file">
+        </div> --}}
 
         <br>
         <label>
@@ -51,7 +51,7 @@
         <div class="form-group">
             <button type="submit" class="btn btn-primary button primary edit" style="margin-left:10%;"> Create </button>
             <button type="submit" class="ui btn btn-danger primary"
-                href="{{redirect()->getUrlGenerator()->previous() }}">إلغاء</a> </button>
+                href="{{route('news.index')}}">إلغاء</a> </button>
 
         </div>
 

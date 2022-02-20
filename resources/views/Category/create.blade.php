@@ -42,15 +42,18 @@
             <div class="form-group">
                 <button type="submit" class="btn btn-primary button primary edit " style="margin-left:10%;"> Create
                 </button>
+               
                 <button type="submit" class="ui btn btn-danger primary"
-                    href="{{redirect()->getUrlGenerator()->previous() }}">إلغاء</a> </button>
-
-            </div>
+                href="{{route('news.index')}}">إلغاء</button>
+               
+               
 
         </form>
-
+        
     </div>
-
+</div>
+    
+</div>
     @endsection
 
     <script>
