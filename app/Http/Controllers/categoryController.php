@@ -42,7 +42,7 @@ class categoryController extends Controller
 
         $category->save();
 
-        // $category->news()->attach($request->title);
+        $category->news()->attach($request->category_title);
 
 
 
@@ -52,9 +52,11 @@ class categoryController extends Controller
     public function edit($id)
     {
         // $news = news::all();
+
+        $nc1 = news::all();
         $category = category::find($id);
 
-        return view('category.edit', compact('category'));
+        return view('category.edit', compact('category','nc1'));
     }
 
     public function update(Request $request, $id)
@@ -71,8 +73,36 @@ class categoryController extends Controller
         $category->title =  $request->title;
 
         $category->save();
-        // $category->news()->sync($request->title);
 
+
+        // $category->news()->updateExistingPivot($category-$id, $request->category_title);
+
+
+        // $category->news()->sync($request->category_title);
+
+        $category->news()->update(["News_id"=>$request->category_title]);
+
+        
+                //  $category->syncWithPivotValues($request->category_title);
+
+        // if($request->category_title == null)
+        //     {
+        //         // $all_category = category::orderBy('id', 'desc')->pluck('id')->toArray();
+        //         // $category->detachcategory($all_category);
+
+        //     //   $all_category = category::orderBy('id', 'desc')->pluck('id')->toArray();
+
+        //                 $category->news()->sync($request->category_title);
+
+        //     }
+        //     else
+        //     {
+        //         // $category->synccategory($request->category_title);
+
+        //     $category->news()->syncwithoutdetaching($request->category_title);
+            
+
+        //     }
 
 
         return redirect('/Category')->with('status', 'category was updated !');
@@ -92,7 +122,10 @@ class categoryController extends Controller
     {
         $category = category::find($id) ;
         $category->delete();
-        // $category->news()->detach($request->title);
+        // $category->news()->detach($request->news_title);
+        $category->news()->sync([]);
+
+
         return redirect('/Category');
     }
 

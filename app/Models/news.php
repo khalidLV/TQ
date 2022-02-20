@@ -17,4 +17,12 @@ class news extends Model
     {
         return $this->belongsToMany(category::class);
     }  
+
+    public function hascat($category) {
+        if ($this->categories()->where('id', $category)->first())
+        {
+            return true;
+        }
+        return false;
+    }
 }

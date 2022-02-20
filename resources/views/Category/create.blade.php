@@ -25,8 +25,8 @@
         @foreach($nc1 as $news)
  
         <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="checkbox2" name="category->title[]" value="{{ $news->id }}">
-        <label class="custom-control-label" for="checkbox2">{{ $news->title }}</label>
+        <input type="checkbox"  id="checkbox2" name="category_title[]" value="{{ $news->id }}">
+        <label  for="checkbox2">{{ $news->title }}</label>
 
         </div>
         </a>

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\news;
 use App\Models\category;
 use Illuminate\Http\Request;
-use App\Models\news_category;
 use Illuminate\Support\Facades\Auth;
 
 class newsController extends Controller
@@ -29,29 +28,38 @@ class newsController extends Controller
     public function store(Request $request)
     {
 
-        // $request->validate([
+        $request->validate([
 
-        //     'title' =>  'required',
-        //     'discraption' => 'required'
+            'title' =>  'required',
+            'discraption' => 'required'
 
-        // ]);
+        ]);
 
         $news = new news();
 
         $news->title   =  $request->title;
         $news->discraption =  $request->discraption;
-     
+        
     //    $image->storeAs('/images');
     //    $news->image = $request->$imagename;
 
     // $path = $request->image->storeAs('images', 'filename.jpg');
-                
+    
+    // if ($request->hasFile('image')) {
+    //     $file = $request->file('image');
+    //     $ext = $file->getClientOriginalExtension();
+    //     $source_name = $request->id;
+    //     $filename = $source_name . '_' . 'image' . '_' . time() . '.' . $ext;
+    //     $file->storeAs('public/images', $filename);
+    // }
+
+    // $news->image = $filename;
 
         $news->save();
 
-        // $news->categories()->attach($request->title);
-
-
+   
+        $news->categories()->syncWithoutDetaching($request->category_title);
+ 
 
         return redirect('/news')->with('status', 'news was updated !');
     }
@@ -60,8 +68,9 @@ class newsController extends Controller
     {
         // $news = news::all();
         $news = news::find($id);
+        $nc = category::all();
 
-        return view('new.edit', compact('news'));
+        return view('new.edit', compact('news','nc'));
     }
 
     public function update(Request $request, $id)
@@ -80,16 +89,24 @@ class newsController extends Controller
 
         $news->save();
 
-        // $news->categories()->sync($request->title);
+if (isset($request->news_title)) {
+    $news->categories()->sync($request->news_title, false);
+} else {
+    $news->categories()->sync(array());
+}
 
-        return redirect('/news')->with('status', 'news was updated !');
+        // $news->categories()->attach($request->news_title);
+
+        return redirect()->route('news.index',['status'=>'تم التعديل بنجاح']);
+
     }
 
         public function destroy(Request $request,$id)
     {
         $news = news::find($id) ;
         $news->delete();
-        // $news->categories()->detach($request->title);
+        // $news->categories()->detach($request->category_title);
+        $news->categories()->sync([]);
         return redirect('/news');
     }
 

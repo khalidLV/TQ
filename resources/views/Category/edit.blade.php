@@ -19,7 +19,26 @@
                 </div>
 
                 
-
+                <br>
+                <label > <h3> Edit Categories : </h3> </label>
+                <hr>
+                        @foreach($nc1 as $news)
+        
+                <div class="custom-control custom-checkbox">
+        
+        
+                <li>
+                    {{$news->title}}
+                    <input type="checkbox" name="news_title[]" value="{{$news->id}}"
+                
+            {{ $category->hasnews($news->id) ? 'checked':'' }} >
+        </li>
+        
+                </div>
+                </a>
+                
+                
+                @endforeach
 
 
 

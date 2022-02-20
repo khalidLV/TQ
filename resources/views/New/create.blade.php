@@ -34,8 +34,8 @@
         @foreach($nc as $category)
  
         <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="checkbox1" name="category->title[]" value="{{ $category->id }}">
-        <label class="custom-control-label" for="checkbox1">{{ $category->title }}</label>
+        <input type="checkbox"  id="checkbox2" name="category_title[]" value="{{ $category->id }}">
+        <label  for="checkbox1">{{ $category->title }}</label>
 
         </div>
         </a>

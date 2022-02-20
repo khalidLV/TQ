@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class news_category extends Model
+class category_news extends Model
 {
     use HasFactory;
 
@@ -14,7 +14,7 @@ class news_category extends Model
     *
     * @var array
     */
-    public $table = 'news_category';
+    public $table = 'category_news';
     /**
     * The attributes that should be hidden for arrays.
     *

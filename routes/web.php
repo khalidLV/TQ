@@ -36,7 +36,7 @@ Route::get('/edit/category/{id}', [categoryController::class , 'edit']) ->name('
 Route::get('/Category', [categoryController::class , 'index']) ->name('category.index') ;
 Route::delete('/delete/category/{id}', [categoryController::class , 'destroy']) ->name('category.delete') ;
 
-Route::get('/home', [categoryController::class , 'home']) ->name('home') ;
+Route::get('/', [categoryController::class , 'home']) ->name('home') ;
 
 
 ;

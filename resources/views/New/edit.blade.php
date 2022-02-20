@@ -30,6 +30,27 @@
                     <input type="file" name="coverImage" id="coverImage" class="form-control-file">
                 </div>
 
+                <br>
+        <label > <h3> Edit Categories : </h3> </label>
+        <hr>
+                @foreach($nc as $category)
+
+        <div class="custom-control custom-checkbox">
+
+
+        <li>
+            {{$category->title}}
+            <input type="checkbox" id="checkbox1" name="category_title[]" value="{{$category->id}}"
+        
+    {{ $news->hascat($category->id) ? 'checked':'' }} >
+</li>
+
+        </div>
+        </a>
+        
+        
+        @endforeach
+
 
 
                 <div class="form-group">

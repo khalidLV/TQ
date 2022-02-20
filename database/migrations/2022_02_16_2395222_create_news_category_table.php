@@ -13,9 +13,9 @@ class CreateNewsCategoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('News_Category', function (Blueprint $table) {
-            $table->foreignId('News_id')->references('id')->on('News');
-            $table->foreignId('category_id')->references('id')->on('category');
+        Schema::create('category_news', function (Blueprint $table) {
+            $table->foreignId('News_id')->references('id')->on('News')->onUpdate('cascade') ->onDelete('cascade');
+            $table->foreignId('category_id')->references('id')->on('category')->onUpdate('cascade') ->onDelete('cascade');
             
         });
     }
