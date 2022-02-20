@@ -14,7 +14,7 @@
                 <th scope="col">ID</th>
                 <th scope="col">Title</th>
                 <th scope="col">Discraption</th>
-                <th scope="col">Image</th>
+               // <th scope="col">Image</th>
                 <th scope="col">Action</th>
                 <th scope="col"></th>
             </tr>
@@ -32,7 +32,7 @@
                 <td>{{$news->id}}</td>
                 <td>{{$news->title}}</td>
                 <td>{{$news->discraption}}</td>
-                <td>{{$news->image}}</td>
+               // <td>{{$news->image}}</td>
                 <td>
                     <a href="{{ route('news.edit', ['id' => $news->id ])}}" class="btn btn-primary button primary edit">
                         Edit</a>
