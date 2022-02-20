@@ -31,25 +31,26 @@
                 </div>
 
                 <br>
-        <label > <h3> Edit Categories : </h3> </label>
-        <hr>
+                <label>
+                    <h3> Edit Categories : </h3>
+                </label>
+                <hr>
                 @foreach($nc as $category)
 
-        <div class="custom-control custom-checkbox">
+                <div class="custom-control custom-checkbox">
 
 
-        <li>
-            {{$category->title}}
-            <input type="checkbox" id="checkbox1" name="category_title[]" value="{{$category->id}}"
-        
-    {{ $news->hascat($category->id) ? 'checked':'' }} >
-</li>
+                    <li>
+                        {{$category->title}}
+                        <input type="checkbox" id="checkbox1" name="category_title[]" value="{{$category->id}}" {{
+                            $news->hascat($category->id) ? 'checked':'' }} >
+                    </li>
 
-        </div>
-        </a>
-        
-        
-        @endforeach
+                </div>
+                </a>
+
+
+                @endforeach
 
 
 
@@ -69,4 +70,4 @@
     $(function() {
       $('[data-toggle="tooltip"]').tooltip()
     })
-    </script>
+</script>

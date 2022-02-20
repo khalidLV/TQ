@@ -9,7 +9,7 @@
     <h3>Create News</h3>
     <hr>
 
-    <form action="{{route('news.store')}}" method="POST" >
+    <form action="{{route('news.store')}}" method="POST">
 
 
         @csrf
@@ -26,28 +26,31 @@
         <div class="form-group">
             <input type="file" name="image" id="image" class="form-control-file">
         </div>
-<br>
-        <label > <h3> Choose Categories : </h3> </label>
+        <br>
+        <label>
+            <h3> Choose Categories : </h3>
+        </label>
         <hr>
 
 
         @foreach($nc as $category)
- 
+
         <div class="custom-control custom-checkbox">
-        <input type="checkbox"  id="checkbox2" name="category_title[]" value="{{ $category->id }}">
-        <label  for="checkbox1">{{ $category->title }}</label>
+            <input type="checkbox" id="checkbox2" name="category_title[]" value="{{ $category->id }}">
+            <label for="checkbox1">{{ $category->title }}</label>
 
         </div>
         </a>
-        
-        
+
+
         @endforeach
 
 
 
         <div class="form-group">
             <button type="submit" class="btn btn-primary button primary edit" style="margin-left:10%;"> Create </button>
-            <button type="submit" class="ui btn btn-danger primary" href="{{redirect()->getUrlGenerator()->previous() }}" >إلغاء</a> </button>
+            <button type="submit" class="ui btn btn-danger primary"
+                href="{{redirect()->getUrlGenerator()->previous() }}">إلغاء</a> </button>
 
         </div>
 
@@ -61,4 +64,4 @@
     $(function() {
       $('[data-toggle="tooltip"]').tooltip()
     })
-    </script>
+</script>

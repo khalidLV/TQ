@@ -21,7 +21,7 @@
                             </div>
 
                             <h6>News</h6>
-                            <p class="card-text text-box">  total news : {{$countnews}} </p>
+                            <p class="card-text text-box"> total news : {{$countnews}} </p>
                         </div>
                     </div>
                 </a>

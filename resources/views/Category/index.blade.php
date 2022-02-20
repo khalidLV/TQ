@@ -41,9 +41,9 @@
         </td>
 
         <td>
-          
+
           <form action="{{route('category.delete',['id'=> $category->id]) }}" method="POST">
-            <button type="submit" class="btn btn-danger primary float-left margin-left: 100px "> Delete </button> 
+            <button type="submit" class="btn btn-danger primary float-left margin-left: 100px "> Delete </button>
             @csrf
             @method('delete')
           </form>
@@ -65,7 +65,7 @@
 @endsection
 
 <script>
-$(function() {
+  $(function() {
   $('[data-toggle="tooltip"]').tooltip()
 })
 </script>

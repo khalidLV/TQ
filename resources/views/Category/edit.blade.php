@@ -18,26 +18,27 @@
                     <input type="text" name="title" id="title" class="form-control" value="{{$category->title}}">
                 </div>
 
-                
+
                 <br>
-                <label > <h3> Edit Categories : </h3> </label>
+                <label>
+                    <h3> Edit Categories : </h3>
+                </label>
                 <hr>
-                        @foreach($nc1 as $news)
-        
+                @foreach($nc1 as $news)
+
                 <div class="custom-control custom-checkbox">
-        
-        
-                <li>
-                    {{$news->title}}
-                    <input type="checkbox" name="news_title[]" value="{{$news->id}}"
-                
-            {{ $category->hasnews($news->id) ? 'checked':'' }} >
-        </li>
-        
+
+
+                    <li>
+                        {{$news->title}}
+                        <input type="checkbox" name="news_title[]" value="{{$news->id}}" {{
+                            $category->hasnews($news->id) ? 'checked':'' }} >
+                    </li>
+
                 </div>
                 </a>
-                
-                
+
+
                 @endforeach
 
 
@@ -59,4 +60,4 @@
     $(function() {
       $('[data-toggle="tooltip"]').tooltip()
     })
-    </script>
+</script>

@@ -37,12 +37,13 @@
                     <a href="{{ route('news.edit', ['id' => $news->id ])}}" class="btn btn-primary button primary edit">
                         Edit</a>
                 </td>
-               
+
                 <td>
                     @csrf
                     @method('DELETE')
                     <form action="{{route('news.delete',['id'=> $news->id]) }}" method="POST">
-                        <button type="submit" class="btn btn-danger primary float-left margin-left: 100px "> Delete </button> 
+                        <button type="submit" class="btn btn-danger primary float-left margin-left: 100px "> Delete
+                        </button>
                         @csrf
                         @method('delete')
                     </form>
@@ -59,12 +60,11 @@
 </div>
 {{-- {{$newsPG->links()}} --}}
 
-    @endsection
+@endsection
 
 
-    <script>
-
-$(function() {
+<script>
+    $(function() {
   $('[data-toggle="tooltip"]').tooltip()
 })
-    </script>
+</script>
