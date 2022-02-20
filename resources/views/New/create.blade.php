@@ -23,9 +23,10 @@
             <textarea name="discraption" id="discraption" cols="20" rows="5" class="form-control"></textarea>
         </div>
 
-        <div class="form-group">
-            <input type="file" name="image" id="image" class="form-control-file">
-        </div>
+       //   <div class="form-group">
+       //     <input type="file" name="image" id="image" class="form-control-file">
+        //</div>
+
         <br>
         <label>
             <h3> Choose Categories : </h3>
